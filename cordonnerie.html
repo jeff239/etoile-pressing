@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Étoile Pressing - Redesign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --gold-light: #e2c286;
+            --dark: #1a1a1a;
+            --bg-cream: #fdfaf3;
+            --text-gray: #4a4a4a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--dark);
+        }
+
+        /* --- Header --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 1.4rem;
+        }
+
+        .header-link {
+            text-decoration: none;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 75vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./coo.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            max-width: 500px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            max-width: 400px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* --- Services --- */
+        .services-section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .services-section h2 span {
+            color: var(--gold);
+        }
+
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: transparent;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+        /* --- Trust Section --- */
+        .trust-section {
+            padding: 40px 5%;
+            background-color: #f7f3eb;
+            text-align: center;
+        }
+
+        .trust-section h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            opacity: 0.7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* --- Floating Contact Box --- */
+        .contact-container {
+            padding: 40px 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-box {
+            background: #222;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-box h3 {
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-outline {
+            border: 1px solid #555;
+            color: white;
+        }
+
+        .btn-gold {
+            background: linear-gradient(to right, #b08d4a, #d4b375);
+            color: #222;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 20px;
+            color: var(--text-gray);
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .grid-services { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8rem; }
+            .logos { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="header-link"><img src="https://cdn-icons-png.flaticon.com/512/6738/6738307.png" alt="phone" style="width: 20px; height: 20px;"> APPELER</a>
+        <div class="logo">L'ÉTOILE PRESSING</div>
+        <a href="#" class="header-link"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" alt="phone" style="width: 20px; height: 20px;"> WHATSAPP</a>
+    </header>
+
+    <section class="hero">
+        <h1>L'ART DU <span>DÉTAIL</span>, QUI FAIT BRILLER VOS PAS</h1>
+    
+        <p>Maison d'entretien et de rénovation cuir. <br />Service premium d'entretien et de valorisation des chaussures en cuir.</p>
+    </section>
+
+    <section class="services-section">
+        <h2>NOS <span>SERVICES EXCLUSIFS</span></h2>
+        <div class="grid-services">
+            <div class="service-card">
+                <div class="icon-box"><img src="https://cdn-icons-png.flaticon.com/512/4512/4512666.png" alt="phone" style="width: 30px; height: 30px;"></div>
+                <h3>Nettoyage & Entretien</h3>
+                <p>Nettoyage en profondeur, soin des cuirs, et protection durable.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><img src="https://cdn-icons-png.flaticon.com/512/7242/7242147.png" alt="phone" style="width: 30px; height: 30px;"></div>
+                <h3>Cirage Premium</h3>
+                <p>Glaçage miroir à la main, utilisation de crèmes et cires de premère qualité.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077198.png" alt="phone" style="width: 30px; height: 30px;"></div>
+                <h3>Restauration</h3>
+                <p>Réparation de semelles, talons, et coutures. Remise à neuf complète.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><img src="https://cdn-icons-png.flaticon.com/512/5311/5311124.png" alt="phone" style="width: 30px; height: 30px;"></div>
+                <h3>Recoloration</h3>
+                <p>Changement ou rafraîchissement de la couleur, patine personnalisée.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <h4>ILS NOUS ONT FAIT CONFIANCE</h4>
+        <div class="logos">
+            <span><img src="./ceo.png" alt="phone" style="width: auto; height: 60px;"></span>
+            <span><img src="./bad.png" alt="phone" style="width: auto; height: 60px;"></span>
+            <span><img src="./sofitel.png" alt="phone" style="width: auto; height: 60px;"></span>
+        </div>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-box">
+            <h3>NOUS CONTACTER</h3>
+            <div class="btn-group">
+                <a href="#" class="btn btn-outline" style="display: flex; align-items: center; gap: 4px;"><img src="https://cdn-icons-png.flaticon.com/512/186/186239.png" alt="phone" style="width: 20px; height: 20px;"> APPELER</a>
+                <a href="#" class="btn btn-outline" style="display: flex; align-items: center; gap: 4px;"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp" style="width: 20px; height: 20px;"> WHATSAPP</a>
+                <a href="#" class="btn btn-gold">PRENDRE RENDEZ-VOUS</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © L'Étoile Pressing • Service premium – Grand Abidjan
+    </footer>
+
+</body>
+</html>
